@@ -1,0 +1,83 @@
+body, html {
+	font-family: 'Open Sans', serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: black;
+	font-weight: 400;
+	width: 100% !important;
+    height: 100% !important;
+
+}
+.navbar{
+    background: black;
+    transition:all 1s ease;
+}
+.navbar-background{
+    padding: 5px 20px;
+}
+
+.navbar-brand{
+    color: rgb(191, 142, 0);
+    font-size: 24px;
+    transition: all 1s ease;
+}
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    transition: all 2s ease;
+    font-size: 18px;
+    margin: 0px 20px;
+    }
+.nav-link:hover{
+    color: rgb(191, 142, 0);
+}
+.navbar-toggler{
+    color: none;
+    background: transparent;
+    border: none;
+}
+.toggler-btn{
+    border: 2px solid black;
+    padding: 3px;
+    transition: all 2s ease;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 10px;
+    background: rgb(191, 142, 0);
+    border: none;
+}
+
+.heading-info{
+    font-size: 24px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.text-center{
+    text-align: center;
+
+}
+
+.info{
+    background-image: url('../img/camel2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 110vh;
+    background-position: fixed;
+}
+.info-body{
+    padding-top: 10px;
+}
+
+.submit{
+        transition: all 1s ease;
+    }
+.submit:hover{
+    color: red;
+    background: black;
+}

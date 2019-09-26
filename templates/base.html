@@ -1,0 +1,59 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MyGeoLocation</title>
+
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/bootstrap-4.3.1-dist/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md primary-color ">
+        <div class="container">
+            <a class="navbar-brand primary-color" href="{% url 'index' %}">MyGeoFinder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="toggler-btn">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                          </div>
+
+                </button>
+
+                <div class="collapse navbar-collapse primary-color" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" aria-disabled="true">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+            </nav>
+</div>
+
+{%block content%}
+{%endblock%}
+
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

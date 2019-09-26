@@ -1,0 +1,11 @@
+pip install Django==2.2.4, djangorestframework==3.10.2, python-memcached==1.59,  requests==2.22.0
+
+	how to run the app.
+step 1. open this project in two windows
+step 2. run the backend using the following commands
+	-cd geolocation 
+	-python manage.py runserver # by default this will be launched on  http://127.0.0.1:8000/
+step 3. open the second instance(frontend) of this project and run the following commands
+	-cd geolocation 
+	-python manage.py runserver 8080 # this will be launched on  http://127.0.0.1:8080/
+	-the consume the api using the backend server address 'http://127.0.0.1:8000/'

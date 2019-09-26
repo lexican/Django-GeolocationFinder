@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-8 my-4">
+                <form class="form-inline" id="ipfinder" method="get">
+                    {% csrf_token %}
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="ip" class="sr-only">Enter any Ip address</label>
+                    <input type="text" class="form-control" id="ip" placeholder="Enter any Ip address" name="ip">
+                  </div>
+                  <button type="submit" class="btn btn-primary mb-2">Search</button>
+                </form>
+                <div id="data">
+                    Show here
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/js/bootstrap.min.js' %} "></script>
+
+
+<script>
+  $(document).ready( () => {
+    $('#ipfinder').submit((e) => {
+        e.preventDefault();
+        var input = $('#ip').val();
+          $.ajax({
+            type: 'GET',
+            url: "{% url 'in' %}",
+            data: $('#ipfinder').serialize(),
+            success: (data) => {
+                $('#data').html( data.country_name + "<br>" + data.continent_name + "<br>" + data.country_code + "<br>" + data.region_name + "<br>" + data.city + "<br>" + latitude + "<br>" + data.city + "<br>" + longitude + "<br>");
+            }
+            });
+    });
+  });
+
+</script>
+{%endblock%}
